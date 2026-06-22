@@ -1,48 +1,51 @@
-from fastapi import FastAPI, File, UploadFile
-from fastapi.middleware.cors import CORSMiddleware
+from fastapi import FastAPI, UploadFile, File, Form
+from fastapi.responses import JSONResponse
 import whisper
 import tempfile
 import os
 
-app = FastAPI(title="Pendo Health Voice")
+app = FastAPI(title="Pendo Health Voice API", version="1.0")
 
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["*"],
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
+print("Loading whisper model medium...")
+model = whisper.load_model("medium")
+print("Whisper model loaded. Translator ready.")
 
-print("Loading Whisper model...")
-model = whisper.load_model("small")
-print("Whisper model loaded.")
-
-@app.get("/")
-def read_root():
-    return {"message": "Pendo Health Voice API running"}
+@app.get("/health")
+async def health_check():
+    return {"status": "healthy", "whisper_model": "medium"}
 
 @app.post("/stt")
-async def speech_to_text(file: UploadFile = File(...)):
+async def speech_to_text(
+    file: UploadFile = File(...),
+    translate_to: str = Form("en")
+):
     try:
-        # Save upload to temp file first
-        with tempfile.NamedTemporaryFile(delete=False, suffix=".mp4") as tmp:
-            contents = await file.read()
-            tmp.write(contents)
+        with tempfile.NamedTemporaryFile(delete=False, suffix=".wav") as tmp:
+            content = await file.read()
+            tmp.write(content)
             tmp_path = tmp.name
-        
-        # Transcribe
-        result = model.transcribe(tmp_path)
-        transcript = result["text"]
-        
-        # Rule #9: Delete audio immediately
+
+        result = model.transcribe(tmp_path, task="transcribe")
+        detected_lang = result["language"]
+        original_text = result["text"]
+
+        if translate_to != detected_lang and translate_to == "en":
+            translation = model.transcribe(tmp_path, task="translate")
+            translated_text = translation["text"]
+        else:
+            translated_text = original_text
+
         os.unlink(tmp_path)
-        
-        return {
-            "transcript": transcript,
-            "status": "success",
-            "safety_check": "Audio deleted per Rule #9"
-        }
-    
+
+        return JSONResponse({
+            "detected_language": detected_lang,
+            "original_text": original_text.strip(),
+            "translated_to": translate_to,
+            "translated_text": translated_text.strip()
+        })
+
     except Exception as e:
-        return {"error": str(e), "status": "failed"}
+        return JSONResponse(
+            status_code=500,
+            content={"error": str(e)}
+        )
