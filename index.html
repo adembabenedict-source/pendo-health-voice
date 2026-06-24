@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pendo Health Voice - Advanced Medical Voice Transcription Platform</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Pendo Health Voice uses advanced AI to transcribe healthcare conversations with speed, accuracy, and security. Generate SOAP notes automatically. HIPAA-ready clinical workflows.">
+  <meta name="keywords" content="medical voice transcription, healthcare AI, SOAP notes, EHR integration, HIPAA transcription, clinical notes, voice to text, Pendo Health">
+  <meta name="author" content="Pendo Health">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Pendo Health Voice - AI Medical Voice Transcription">
+  <meta property="og:description" content="Transform medical conversations into accurate clinical notes in real-time using advanced secure AI.">
+  <meta property="og:image" content="assets/dashboard-preview.png">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="Pendo Health Voice - AI Medical Voice Transcription">
+  <meta property="twitter:description" content="Transform medical conversations into accurate clinical notes in real-time using advanced secure AI.">
+  <meta property="twitter:image" content="assets/dashboard-preview.png">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22url(%23g)%22/><defs><linearGradient id=%22g%22 x1=%220%22 y1=%220%22 x2=%221%22 y2=%221%22><stop offset=%220%25%22 stop-color=%22%230f2b5c%22/><stop offset=%22100%25%22 stop-color=%22%232563eb%22/></linearGradient></defs><path d=%22M50 25v50M35 35v30M65 35v30M20 45v10M80 45v10%22 stroke=%22white%22 stroke-width=%228%22 stroke-linecap=%22round%22/></svg>">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header" id="main-header">
+    <div class="container navbar" id="main-navbar">
+      <a href="#" class="logo" id="nav-logo" aria-label="Pendo Health Voice Home">
+        <div class="logo-icon">
+          <!-- Voice Waves Overlay -->
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+            <path d="M12 4v16M6 8v8M18 8v8M2 11v2M22 11v2" />
+          </svg>
+        </div>
+        <span>Pendo Health <span style="color: var(--accent-blue);">Voice</span></span>
+      </a>
+      
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links" id="navbar-menu">
+          <li><a href="#features" class="nav-link" id="link-features">Features</a></li>
+          <li><a href="#simulator" class="nav-link" id="link-simulator">Interactive Demo</a></li>
+          <li><a href="#how-it-works" class="nav-link" id="link-how">How It Works</a></li>
+          <li><a href="#security" class="nav-link" id="link-security">Security</a></li>
+          <li><a href="#testimonials" class="nav-link" id="link-testimonials">Testimonials</a></li>
+        </ul>
+      </nav>
+      
+      <div class="nav-actions" id="navbar-actions">
+        <a href="#contact" class="btn btn-secondary" id="btn-nav-demo">View Demo</a>
+        <a href="#contact" class="btn btn-primary" id="btn-nav-start">Start Transcribing</a>
+      </div>
+      
+      <button class="hamburger" id="hamburger-toggle" aria-expanded="false" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-content reveal active">
+          <div class="badge" id="hero-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 4px;">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+            Next-Gen HIPAA-Ready AI
+          </div>
+          <h1 id="hero-headline">Transform Medical Conversations into <span class="text-gradient">Accurate Clinical Notes</span></h1>
+          <p id="hero-subheadline">Pendo Health Voice uses advanced AI to transcribe healthcare conversations with speed, accuracy, and security.</p>
+          <div class="hero-ctas">
+            <a href="#simulator" class="btn btn-primary" id="hero-btn-start">Start Transcribing</a>
+            <a href="#simulator" class="btn btn-secondary" id="hero-btn-demo">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="5 3 19 12 5 21 5 3"/>
+              </svg>
+              View Demo
+            </a>
+          </div>
+        </div>
+        
+        <div class="hero-image-wrapper reveal active">
+          <!-- Floating UI Badges -->
+          <div class="hero-floating-badge badge-top-left" id="badge-accuracy">
+            <div class="floating-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                <polyline points="22 4 12 14.01 9 11.01"/>
+              </svg>
+            </div>
+            <div class="floating-info">
+              <h4>99.8% Accuracy</h4>
+              <p>Medical-grade NLP model</p>
+            </div>
+          </div>
+          
+          <div class="hero-floating-badge badge-bottom-right" id="badge-time">
+            <div class="floating-icon teal">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+            </div>
+            <div class="floating-info">
+              <h4>&lt; 5s Processing</h4>
+              <p>Immediate summary delivery</p>
+            </div>
+          </div>
+          
+          <div class="hero-image-card">
+            <img src="assets/hero-doctor.png" alt="Healthcare professional in hospital using Pendo Health AI Voice Transcription software on tablet" id="hero-img-main">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust Section -->
+    <section class="trust" id="trust-section">
+      <div class="container">
+        <h2 class="trust-title">Enterprise-Grade Security & Trust Framework</h2>
+        <div class="trust-grid">
+          <div class="trust-card" id="trust-card-hipaa">
+            <div class="trust-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+            </div>
+            <div class="trust-info">
+              <h4>HIPAA-Ready</h4>
+              <p>Fully compliant with PHI safeguards</p>
+            </div>
+          </div>
+          
+          <div class="trust-card" id="trust-card-encryption">
+            <div class="trust-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+              </svg>
+            </div>
+            <div class="trust-info">
+              <h4>AES-256 Encryption</h4>
+              <p>End-to-end data encryption</p>
+            </div>
+          </div>
+          
+          <div class="trust-card" id="trust-card-soc2">
+            <div class="trust-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+              </svg>
+            </div>
+            <div class="trust-info">
+              <h4>EHR Integrations</h4>
+              <p>HL7 & FHIR API compatible</p>
+            </div>
+          </div>
+          
+          <div class="trust-card" id="trust-card-uptime">
+            <div class="trust-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+              </svg>
+            </div>
+            <div class="trust-info">
+              <h4>99.99% Uptime</h4>
+              <p>Robust cloud infrastructure</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Live Simulator Section -->
+    <section class="demo-section section-padding" id="simulator">
+      <div class="container demo-grid">
+        <div class="reveal">
+          <div class="badge badge-teal">Live Demo Experience</div>
+          <h2>See Pendo Health Voice in Action</h2>
+          <p>Select a clinical consultation scenario below to simulate how Pendo Health Voice transcribes medical encounters and automatically generates structured SOAP notes in seconds.</p>
+          
+          <div class="demo-selector" id="scenario-selector">
+            <div class="selector-option active" data-scenario="cardiology" id="scenario-cardio" role="button" tabindex="0">
+              <div class="selector-radio"></div>
+              <div class="selector-info">
+                <h4>Cardiology Consult</h4>
+                <p>Hypertension follow-up & Metformin assessment</p>
+              </div>
+            </div>
+            
+            <div class="selector-option" data-scenario="orthopedics" id="scenario-ortho" role="button" tabindex="0">
+              <div class="selector-radio"></div>
+              <div class="selector-info">
+                <h4>Orthopedics Visit</h4>
+                <p>Post-op knee arthroscopy evaluation</p>
+              </div>
+            </div>
+
+            <div class="selector-option" data-scenario="pediatrics" id="scenario-ped" role="button" tabindex="0">
+              <div class="selector-radio"></div>
+              <div class="selector-info">
+                <h4>Pediatric Checkup</h4>
+                <p>Well-child exam & immunization discussion</p>
+              </div>
+            </div>
+          </div>
+          
+          <div style="display: flex; gap: 1rem; align-items: center; margin-top: 1rem;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-teal)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="12" y1="16" x2="12" y2="12"/>
+              <line x1="12" y1="8" x2="12.01" y2="8"/>
+            </svg>
+            <span style="font-size: 0.875rem; color: var(--text-secondary); font-weight: 500;">Hover over highlighted terms in the transcript to view medical lookup data.</span>
+          </div>
+        </div>
+        
+        <div class="demo-device reveal">
+          <div class="demo-header">
+            <div class="demo-status">
+              <div class="status-dot" id="simulator-dot"></div>
+              <div class="status-text" id="simulator-status-text">SYSTEM READY</div>
+            </div>
+            <div class="demo-tabs">
+              <button class="demo-tab-btn active" id="tab-transcript" aria-controls="simulator-screen">Transcript</button>
+              <button class="demo-tab-btn" id="tab-soap" aria-controls="simulator-screen">SOAP Note</button>
+            </div>
+          </div>
+          
+          <div class="demo-screen" id="simulator-screen">
+            <!-- Simulated transcript loads here -->
+            <div style="display:flex; flex-direction:column; align-items:center; justify-content:center; height:100%; color:var(--text-muted); text-align:center;">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:1rem;">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="12" y1="8" x2="12" y2="16"/>
+                <line x1="8" y1="12" x2="16" y2="12"/>
+              </svg>
+              <p style="color:var(--text-muted); font-size: 0.95rem;">Click the Play button below to start the simulated live recording and clinical note generation.</p>
+            </div>
+          </div>
+          
+          <div class="demo-controls">
+            <button class="demo-play-btn" id="simulator-play-btn" aria-label="Start simulation">
+              <svg id="play-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="5 3 19 12 5 21 5 3"/>
+              </svg>
+              <svg id="stop-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+                <rect x="4" y="4" width="16" height="16" rx="2" ry="2"/>
+              </svg>
+            </button>
+            <div class="waveform-container" id="simulator-waveform">
+              <!-- JS will generate elements -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features section-padding" id="features">
+      <div class="container">
+        <div class="section-header text-center reveal">
+          <div class="badge">Platform Capabilities</div>
+          <h2>Advanced Intelligence for Modern Healthcare</h2>
+          <p>Equipped with industry-leading voice processing models, designed specifically to tackle the complexities of clinical speech and documentation workflows.</p>
+        </div>
+        
+        <div class="features-grid">
+          <div class="feature-card reveal" id="feature-realtime">
+            <div class="feature-icon-wrapper" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
+                <path d="M19 10v2a7 7 0 0 1-14 0v-2M12 19v4M8 23h8"/>
+              </svg>
+            </div>
+            <h3>Real-Time Voice Transcription</h3>
+            <p>Converts speech to clinical text with sub-second latency, keeping pace with fast-speaking clinicians during patient visits.</p>
+          </div>
+          
+          <div class="feature-card reveal" id="feature-terminology">
+            <div class="feature-icon-wrapper" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+              </svg>
+            </div>
+            <h3>Medical Terminology Recognition</h3>
+            <p>Understands complex pharmaceuticals, anatomical terms, dosages, and diseases, mapped directly to ICD-10 and SNOMED-CT databases.</p>
+          </div>
+          
+          <div class="feature-card reveal" id="feature-speaker">
+            <div class="feature-icon-wrapper" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
+            <h3>Speaker Identification</h3>
+            <p>Advanced diarization distinguishes between clinician explanations, patient reports, and family members during a consult.</p>
+          </div>
+          
+          <div class="feature-card reveal" id="feature-secure">
+            <div class="feature-icon-wrapper" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+              </svg>
+            </div>
+            <h3>Secure Patient Data Handling</h3>
+            <p>Automated anonymization strips PHI before parsing, securing patient records and meeting strict data isolation requirements.</p>
+          </div>
+          
+          <div class="feature-card reveal" id="feature-summaries">
+            <div class="feature-icon-wrapper" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="2" x2="22" y2="6"/>
+                <path d="M7.5 8h.01M7.5 12h.01M7.5 16h.01M10.5 8H18M10.5 12H18M10.5 16H18"/>
+                <rect x="3" y="3" width="18" height="18" rx="2"/>
+              </svg>
+            </div>
+            <h3>AI-Powered Summaries</h3>
+            <p>Instantly distills long patient conversations into structured, EHR-ready clinical documents, reducing charting work by up to 70%.</p>
+          </div>
+          
+          <div class="feature-card reveal" id="feature-multilingual">
+            <div class="feature-icon-wrapper" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="2" y1="12" x2="22" y2="12"/>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+              </svg>
+            </div>
+            <h3>Multi-Language Support</h3>
+            <p>Transcribes and structures medical consultations conducted in English, Spanish, French, Mandarin, and 12+ other languages.</p>
+          </div>
+          
+          <div class="feature-card reveal" id="feature-upload">
+            <div class="feature-icon-wrapper" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v4"/>
+                <polyline points="17 8 12 3 7 8"/>
+                <line x1="12" y1="3" x2="12" y2="15"/>
+              </svg>
+            </div>
+            <h3>Fast Audio Upload & Processing</h3>
+            <p>Upload pre-recorded audio dictations or telehealth session files in any format for rapid processing in the background.</p>
+          </div>
+          
+          <div class="feature-card reveal" id="feature-download">
+            <div class="feature-icon-wrapper" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                <polyline points="7 10 12 15 17 10"/>
+                <line x1="12" y1="15" x2="12" y2="3"/>
+              </svg>
+            </div>
+            <h3>Downloadable Transcripts</h3>
+            <p>Export notes as encrypted PDF, DOCX, Markdown, or JSON formats, or sync them directly into your clinic's EHR system.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works section-padding" id="how-it-works">
+      <div class="container">
+        <div class="section-header text-center reveal">
+          <div class="badge badge-teal">Workflow</div>
+          <h2>How It Works</h2>
+          <p>Seamlessly integrated into your existing workflows, transforming patient encounters into complete documentation in 5 simple steps.</p>
+        </div>
+        
+        <div class="steps-container">
+          <div class="step-item reveal" id="step-1">
+            <div class="step-badge">1</div>
+            <h3>Upload or Record</h3>
+            <p>Capture clinical audio live via our secure web application, mobile app, or upload pre-recorded dictations.</p>
+          </div>
+          
+          <div class="step-item reveal" id="step-2" style="transition-delay: 0.1s;">
+            <div class="step-badge">2</div>
+            <h3>AI Speech Processing</h3>
+            <p>Our HIPAA-secure speech engine processes the audio file, separating clinician and patient voices.</p>
+          </div>
+          
+          <div class="step-item reveal" id="step-3" style="transition-delay: 0.2s;">
+            <div class="step-badge">3</div>
+            <h3>Medical Recognition</h3>
+            <p>Clinical terminologies, medications, dosages, and active diagnoses are extracted and tagged.</p>
+          </div>
+          
+          <div class="step-item reveal" id="step-4" style="transition-delay: 0.3s;">
+            <div class="step-badge">4</div>
+            <h3>Note Generation</h3>
+            <p>Structured clinical summaries (SOAP notes, templates) are generated by clinical LLMs.</p>
+          </div>
+          
+          <div class="step-item reveal" id="step-5" style="transition-delay: 0.4s;">
+            <div class="step-badge">5</div>
+            <h3>Export & Sync</h3>
+            <p>Review the note, sign off, and sync directly with Epic, Cerner, Athenahealth, or export as secure documents.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Security & Compliance Section (Trust Deep Dive) -->
+    <section class="security section-padding" id="security">
+      <div class="container security-grid">
+        <div class="reveal">
+          <div class="badge">Security & Integrity</div>
+          <h2>Enterprise-Grade Security by Design</h2>
+          <p>Healthcare data demands absolute integrity. Pendo Health Voice is built from the ground up to exceed HIPAA standards and protect Patient Health Information (PHI).</p>
+          
+          <ul class="security-list">
+            <li class="security-list-item" id="sec-item-1">
+              <div class="security-list-icon" aria-hidden="true">✓</div>
+              <div class="security-list-text">
+                <h4>End-to-End Encryption</h4>
+                <p>All data is encrypted in transit using TLS 1.3 and at rest using AES-256 with enterprise key management.</p>
+              </div>
+            </li>
+            
+            <li class="security-list-item" id="sec-item-2">
+              <div class="security-list-icon" aria-hidden="true">✓</div>
+              <div class="security-list-text">
+                <h4>Zero-Data Retention Policy Available</h4>
+                <p>For high-sensitivity environments, configure session streams to immediately wipe audio files post-transcription.</p>
+              </div>
+            </li>
+            
+            <li class="security-list-item" id="sec-item-3">
+              <div class="security-list-icon" aria-hidden="true">✓</div>
+              <div class="security-list-text">
+                <h4>Signed Business Associate Agreement (BAA)</h4>
+                <p>We sign BAAs with clinical organizations, outlining our mutual commitments to safeguard sensitive patient records.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="security-image-card reveal">
+          <img src="assets/security-encryption.png" alt="Clinical cyber-security diagram highlighting end-to-end data encryption and HIPAA-compliance locks" loading="lazy" id="security-img-main">
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials section-padding" id="testimonials">
+      <div class="container">
+        <div class="section-header text-center reveal">
+          <div class="badge">Testimonials</div>
+          <h2>Trusted by Clinicians Worldwide</h2>
+          <p>Read how Pendo Health Voice is helping doctors reclaim their clinic hours and focus entirely on patient care.</p>
+        </div>
+        
+        <div class="testimonials-grid">
+          <div class="testimonial-card reveal" id="testimonial-card-1">
+            <div>
+              <span class="quote-icon" aria-hidden="true">“</span>
+              <p class="testimonial-text">Pendo Health Voice has transformed how I run my clinic. I save over 2 hours of charting every day. I can finally give patients my undivided attention without staring at my monitor typing.</p>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar" aria-hidden="true">SC</div>
+              <div class="author-info">
+                <h4>Dr. Sarah Chen, MD</h4>
+                <p>Cardiologist, Metro Health Center</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="testimonial-card reveal" id="testimonial-card-2" style="transition-delay: 0.1s;">
+            <div>
+              <span class="quote-icon" aria-hidden="true">“</span>
+              <p class="testimonial-text">The accuracy of medical terminologies is outstanding. Even with complex post-op orthopedic terminology, the system accurately transcribes and structures SOAP notes flawlessly.</p>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar" aria-hidden="true">MK</div>
+              <div class="author-info">
+                <h4>Dr. Marcus Knight, DO</h4>
+                <p>Orthopedic Surgeon, SportsMed Clinic</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="testimonial-card reveal" id="testimonial-card-3" style="transition-delay: 0.2s;">
+            <div>
+              <span class="quote-icon" aria-hidden="true">“</span>
+              <p class="testimonial-text">Integrating Pendo Health into our Epic EHR was seamless. The API is fast, secure, and our clinicians adapted to the voice platform within a single afternoon.</p>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar" aria-hidden="true">JH</div>
+              <div class="author-info">
+                <h4>James Hart, Chief CIO</h4>
+                <p>Valley Health Systems Group</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action Banner -->
+    <section class="cta-banner text-center" id="contact">
+      <div class="container reveal">
+        <h2>Ready to Reclaim Your Charting Time?</h2>
+        <p>Join thousands of medical professionals using Pendo Health Voice to streamline clinical documentation and improve patient outcomes.</p>
+        <div class="cta-buttons">
+          <a href="mailto:adembabenedict@gmail.com?subject=Pendo Health Voice - Request Demo" class="btn btn-outline-white" id="cta-btn-email" style="background-color: var(--accent-blue); border-color: var(--accent-blue);">Request Clinical Trial</a>
+          <a href="https://github.com/adembabenedict-source" target="_blank" rel="noopener noreferrer" class="btn btn-outline-white" id="cta-btn-github">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 6px;">
+              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+            </svg>
+            View GitHub Source
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand" id="footer-branding">
+          <a href="#" class="logo" style="color: #fff;">
+            <div class="logo-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                <path d="M12 4v16M6 8v8M18 8v8M2 11v2M22 11v2" />
+              </svg>
+            </div>
+            <span>Pendo Health <span style="color: var(--accent-blue);">Voice</span></span>
+          </a>
+          <p>Pendo Health Voice delivers state-of-the-art AI voice processing to empower clinicians, automate clinical charting, and secure patient medical documents.</p>
+          <div class="footer-socials">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                <rect x="2" y="9" width="4" height="12"/>
+                <circle cx="4" cy="4" r="2"/>
+              </svg>
+            </a>
+            <a href="https://github.com/adembabenedict-source" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        
+        <div class="footer-nav" id="footer-nav-platform">
+          <h4>Platform</h4>
+          <ul class="footer-nav-list">
+            <li><a href="#features">Features</a></li>
+            <li><a href="#simulator">Live Demo</a></li>
+            <li><a href="#security">Data Security</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-nav" id="footer-nav-company">
+          <h4>Company</h4>
+          <ul class="footer-nav-list">
+            <li><a href="#">About Us</a></li>
+            <li><a href="mailto:adembabenedict@gmail.com">Contact Support</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="https://github.com/adembabenedict-source">GitHub Source</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-nav" id="footer-nav-legal">
+          <h4>Legal</h4>
+          <ul class="footer-nav-list">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">HIPAA Statement</a></li>
+            <li><a href="#">BAA Agreement</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <div class="footer-copyright" id="footer-copyright-text">
+          &copy; 2026 Pendo Health Inc. All rights reserved.
+        </div>
+        <div class="footer-legal-links" id="footer-legal-container">
+          <span>Developed by <a href="mailto:adembabenedict@gmail.com" style="color: #fff; text-decoration: underline;">adembabenedict@gmail.com</a></span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="app.js"></script>
+</body>
+</html>
