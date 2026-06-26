@@ -2,6 +2,6 @@ streamlit>1.32.0
 openai>=1.30.0
 python-multipart
 openai-whisper
-googletrans==4.0.0-rc1
+googletrans==4.0.0rc1
 torch
 torchaudio
